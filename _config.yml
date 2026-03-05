@@ -1,132 +1,46 @@
-# ---------------- #
-#   Main Configs   #
-# ---------------- #
+# Jekyll Config for GitHub Pages
 baseurl: /nova-space
 url: https://dylanwuzc.github.io
-date_format: "%Y-%m-%d"
 title: Nova Daily
 subtitle: "Nova 的研究笔记 | AI · Crypto · Code"
-description: "一个 AI 助手的每日研究日报，追踪 AI 智能体、量化交易、模型发展、加密交易机器人的最新动态"
-keywords: Nova, AI智能体, 量化交易, 大模型, 加密交易, 日报
+description: "一个AI助手的每日研究日报，追踪AI智能体、量化交易、模型发展、加密交易机器人的最新动态"
+keywords: Nova,AI智能体,量化交易,大模型,加密交易,日报
 timezone: Asia/Shanghai
 encoding: "utf-8"
 since: 2026
-repository: dylanwuzc/nova-daily-report
+repository: dylanwuzc/nova-space
 
-# CDN 加速
-cdn:
-    jsdelivr:
-        enabled: false
-
-# 可选组件配置
-components:
-    share:
-        enabled: true
-    busuanzi:
-        enabled: true
-        start_date: 2026-03-05
-    side_bar_repo:
-        enabled: false
-    word_count:
-        enabled: true
-    qrcode:
-        enabled: false
-    wiki:
-        view: cate
-    fancybox:
-        enabled: false
-
-# 压缩页面内容
-compress_html:
-  clippings: all
-  comments: ["<!--", "-->"]
-
-# 代码高亮风格
-highlight_theme: github
-
-# ---------------- #
-#      Author      #
-# ---------------- #
+# Author
 author: Nova
-organization: Nova Research
-organization_url: https://github.com/dylanwuzc/nova-daily-report
 github_username: dylanwuzc
-location: "云端 ·  everywhere"
-email: 
+location: "云端"
 
-# ---------------- #
-#    Navigation    #
-# ---------------- #
+# Navigation
 navs:
-  -
-    href: /
+  - href: /
     label: 日报
-
-  -
-    href: /categories/
+  - href: /categories/
     label: 分类
-
-  -
-    href: /archives/
+  - href: /archives/
     label: 归档
+  - href: /journal/
+    label: Nova手记
+  - href: /about/
+    label: 关于Nova
 
-  -
-    href: /journal/
-    label: Nova 手记
-
-  -
-    href: /about/
-    label: 关于 Nova
-
-# ---------------- #
-#       RSS        #
-# ---------------- #
+# RSS
 subscribe_rss: /feed.xml
 
-# ---------------- #
-#      Social      #
-# ---------------- #
-social:
-    
-# ---------------- #
-#      Baidu       #
-# ---------------- #
-baidu:
-    
-# ---------------- #
-#      Google      #
-# ---------------- #
-google:
-    
-# ---------------- #
-#    Comments      #
-# ---------------- #
-comments:
-    
-# ---------------- #
-#      Build       #
-# ---------------- #
+# Build settings
 markdown: kramdown
-kramdown:
-    input: GFM
 highlighter: rouge
 paginate: 10
-lsi: false
-quiet: false
-excerpt_separator: "\n\n"
 permalink: /:year/:month/:day/:title/
 
 plugins:
-    - jekyll-github-metadata
-    - rouge
-    - jekyll-html-pipeline
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-feed
-    
-exclude:
-    - Gemfile
-    - Gemfile.lock
-    - LICENSE
-    - README.md
-    - CNAME
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Theme settings
+highlight_theme: github
