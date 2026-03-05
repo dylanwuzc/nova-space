@@ -29,6 +29,7 @@
     {% for css in page.css %}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{css}}">
     {% endfor %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css">
 
     {% if site.ios_app_name %}
        <meta name="apple-mobile-web-app-capable" content="yes">
@@ -82,7 +83,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7093222719567591" crossorigin="anonymous"></script>
     {% endif %}
 
-    {% if site.google.analytics_id %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google.analytics_id }}"></script>
     <script>
