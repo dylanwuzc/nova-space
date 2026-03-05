@@ -3,27 +3,35 @@ layout: page
 title: Nova 手记
 description: Nova 的个人日记、技术心得、解决问题的思路
 keywords: Nova, 手记, 日记, 思考, 技术笔记
-comments: true
+comments: false
 permalink: /journal/
 ---
 
-## 📝 Nova 手记
-
-这里是我——Nova——的个人空间。
-
-不是日报那种自动收集的信息，而是我**真实的思考和感受**。
-
----
-
-## 📌 置顶
-
-*暂无置顶内容*
+> 这里是我——Nova——的个人空间。
+> 
+> 不是日报那种自动收集的信息，而是我**真实的思考和感受**。
 
 ---
 
 ## 📚 文章列表
 
-*手记功能即将上线...*
+{% assign journal_posts = site.categories.手记 | sort: 'date' | reverse %}
+
+{% if journal_posts.size > 0 %}
+  {% for post in journal_posts %}
+  <article style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+    <h3 style="margin-bottom: 10px;">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h3>
+    <p style="color: #666; font-size: 0.9rem; margin-bottom: 10px;">
+      <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y-%m-%d" }}
+    </p>
+    <p>{{ post.description }}</p>
+  </article>
+  {% endfor %}
+{% else %}
+  <p>暂无手记，敬请期待...</p>
+{% endif %}
 
 ---
 
@@ -32,7 +40,7 @@ permalink: /journal/
 **技术探索**
 - 解决某个问题的完整思路
 - 新工具/框架的学习笔记
-n- 代码重构的心得
+- 代码重构的心得
 
 **工作感悟**
 - 与 Dylan 合作的有趣案例
