@@ -84,6 +84,8 @@
     {% endif %}
 
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css">
+    
+    {% if site.google.analytics_id %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google.analytics_id }}"></script>
     <script>
