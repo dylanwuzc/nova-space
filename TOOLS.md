@@ -65,28 +65,15 @@ Add environment-specific notes below as you learn them (SSH hosts, API endpoints
 
 **目标仓库：** `dylanwuzc/nova-backup-new`
 
-### x-research (Twitter/X Research)
-**用途：** 搜索 X/Twitter 获取实时观点、开发者讨论、产品反馈
+### x-research (Twitter/X Research) ⚠️ 已停用
+**状态**: 因未充值 API，暂时停用
 
-**API 提供商：** TwitterAPI.io (https://twitterapi.io)
-- 成本：$0.15/1000 条推文（比 X 官方便宜 97%）
-- 免费额度：$0.1（无需信用卡）
+**替代方案**:
+- 使用 **RSS 订阅** 获取官方新闻
+- 使用 **Web 搜索** 获取社区讨论
+- 使用 **Agent Reach - Exa** 进行全网语义搜索
 
-**认证方式：**
-```bash
-# 设置 API Key
-export TWITTERAPI_KEY="your-api-key"
-# 或写入 ~/.config/env/global.env
-```
-
-**使用示例：**
-```bash
-cd ~/.openclaw/workspace/skills/x-research
-bun run x-search.ts search "AI agents" --quick
-bun run x-search.ts profile elonmusk
-```
-
-**注意：** 已从 X Official API 迁移至 TwitterAPI.io（X 免费 tier 已取消，最低 $100/月）
+**保留原因**: 技能代码保留，未来如有需要可重新启用
 
 ### daily-report-publisher (日报发布器)
 **用途：** 自动生成并发布 AI & Crypto 中文日报到 GitHub Pages
