@@ -60,10 +60,28 @@ cat ~/.openclaw/workspace/memory/heartbeat-state.json
 
 **目标追踪**:
 - 目标胜率: 80%+
-- 当前最优: 65.25% (v0.2)
-- 差距: 14.75%
+- **当前最优**: **7币种组合 81.92%** ✅ **已达标**
+- **总交易**: **128次** ✅ **已达标**
 
 **更新**: `heartbeat-state.json` 中的 `quant_learning` 日期
+
+### 量化策略 Heartbeat 监控 (新增)
+**触发**: 每次 Heartbeat 空闲时执行
+
+**执行内容**:
+1. **拉取最新K线** - 获取 BNB/SOL/ETH/LINK/AVAX 最新1小时数据
+2. **信号检查** - 运行策略判断是否有买入/卖出信号
+3. **状态记录** - 更新监控日志和状态文件
+4. **模拟盘跟踪** - 记录虚拟交易，统计胜率
+
+**命令**:
+```bash
+# 手动执行信号检查
+python3 ~/.openclaw/workspace/skills/quant-learning/scripts/signal_check.py
+
+# 查看最新信号
+cat /tmp/latest_signals.json
+```
 
 ## 提醒规则
 
